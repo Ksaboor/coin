@@ -9,22 +9,23 @@ public class MerkelTreeRoot {
     this class will create the Merkel Root by
      */
 
-    public static byte[] hash(byte[] data) {
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] hash = digest.digest(data);
-            return hash;
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return new byte[]{};
-    }
+//    public static byte[] hash(byte[] data) {
+//        try {
+//            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+//            byte[] hash = digest.digest(data);
+//            return hash;
+//        } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//        }
+//        return new byte[]{};
+//    }
+//
+//    public static String hexString(byte[] digest) {
+//        String hex = String.format( "%064x", new BigInteger( 1, digest ) );
+//        return hex;
+//    }
 
-    public static String hexString(byte[] digest) {
-        String hex = String.format( "%064x", new BigInteger( 1, digest ) );
-        return hex;
-    }
-
+    //MERKEL TREE
     public static byte[] unHexString(String calulatedHash) {
         int len = calulatedHash.length();
         byte[] data = new byte[len / 2];
